@@ -1,0 +1,503 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: odWpPhotogalleryPlugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-13 01:14+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ondrej Donek <ondrejd@gmail.com>\n"
+"Language-Team:  <ondrejd@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: od-photogallery-plugin-renderer.php:87
+#, php-format
+msgid "Published <span class=\"count\">(%s)</span>"
+msgstr "Publikované <span class=\"count\">(%s)</span>"
+
+#: od-photogallery-plugin-renderer.php:88
+#, php-format
+msgid "Deleted <span class=\"count\">(%s)</span>"
+msgstr "Smazané <span class=\"count\">(%s)</span>"
+
+#: od-photogallery-plugin-renderer.php:94
+#: od-photogallery-plugin-renderer.php:155
+msgid "Bulk actions"
+msgstr "Hromadné akce"
+
+#: od-photogallery-plugin-renderer.php:95
+#: od-photogallery-plugin-renderer.php:156
+msgid "Delete"
+msgstr "Smaž"
+
+#: od-photogallery-plugin-renderer.php:96
+#: od-photogallery-plugin-renderer.php:157
+msgid "Undelete"
+msgstr "Obnov"
+
+#: od-photogallery-plugin-renderer.php:98
+#: od-photogallery-plugin-renderer.php:159
+msgid "Apply"
+msgstr "Provést"
+
+#: od-photogallery-plugin-renderer.php:107
+#: od-photogallery-plugin-renderer.php:116
+#: od-photogallery-plugin-renderer.php:407
+#: od-photogallery-plugin-renderer.php:416
+msgid "Title"
+msgstr "Název"
+
+#: od-photogallery-plugin-renderer.php:108
+#: od-photogallery-plugin-renderer.php:117
+#: od-photogallery-plugin-renderer.php:201
+#: od-photogallery-plugin-renderer.php:208
+msgid "Folder"
+msgstr "Adresář"
+
+#: od-photogallery-plugin-renderer.php:109
+#: od-photogallery-plugin-renderer.php:118
+msgid "Created"
+msgstr "Vytvořeno"
+
+#: od-photogallery-plugin-renderer.php:110
+#: od-photogallery-plugin-renderer.php:119
+#: od-photogallery-plugin-renderer.php:202
+#: od-photogallery-plugin-renderer.php:209
+msgid "Images count"
+msgstr "Počet obrázků"
+
+#: od-photogallery-plugin-renderer.php:127
+#, php-format
+msgid "No galleries are founded but you have selected filter for displaying <em>only deleted</em> galleries. You can <a href=\"%1$s\">switch this filter off</a> or create <a href=\"%2$s\">new gallery</a>."
+msgstr "Nebyly nalezeny žádné galerie, ale to může být způsobeno tím, že máte zapnutý filtr pro zobrazení pouze smazaných galerií. Můžete <a href=\"%1$s\">zrušit tento filtr</a> nebo vytvořit <a href=\"%2$s\">novou galerii</a>."
+
+#: od-photogallery-plugin-renderer.php:133
+#, php-format
+msgid "No galleries are founded. You can create new one <a href=\"%s\">here</a>."
+msgstr "Dosud nebyly vytvořeny žádné galerie. Nové můžete vytvořit <a href=\"%s\">zde</a>."
+
+#: od-photogallery-plugin-renderer.php:181
+msgid "Here you can create new gallery from already existing folders with images."
+msgstr "Zde můžete vytvořit galerii z existujícího adresáře s obrázky."
+
+#: od-photogallery-plugin-renderer.php:183
+#, php-format
+msgid "Folders of single galleries should be save only in main photogallery folder as is defined in <a href=\"%1$s\">plugin's options</a> (currently <code>%2$s</code>).<br/>For upload use either your favourite FTP client either plugin's own <a href=\"%3$s\"><strong>wizard for uploading new images</strong></a>. Ifyou want to upload images through your FTP client all images already <strong>should be</strong> available in all required sizes (original, big, thumb) and saved with correct filenames (you can show to any folder of an existing gallery to see what is meaned by <em>correct filenames</em>)."
+msgstr "Složky jednotlivých galerií musí být uloženy pouze v hlavní složce fotogalerie, té, která je definována v <a href=\"%1$s\">nastavení pluginu</a> (nyní <code>%2$s</code>).<br/>Pro nahrání obrázků můžete použít jak váš oblíbený FTP klient nebo vestavěný <a href=\"%3$s\"><strong>průvodce pro nahrání nových obrázků</strong></a>. Pokud zvolíte nahrávání přes FTP klient, pamatujte, že obrázky v nové složce <strong>musí být</strong> již zmenšeny na požadované velikosti (původní, velký a malý náhled) a uloženy pod správnými názvy (jaké pojmenování je správné se můžete zjistit ve složce již existující galerie nahrané pomocí vestavěného průvodce)."
+
+#: od-photogallery-plugin-renderer.php:197
+msgid "Existing directories which are not associated with any gallery"
+msgstr "Existující složky, které nejsou připojeny k nějaké galerii"
+
+#: od-photogallery-plugin-renderer.php:230
+msgid "Delete folder"
+msgstr "Smaž adresář"
+
+#: od-photogallery-plugin-renderer.php:232
+msgid "Create gallery"
+msgstr "Vytvoř galerii"
+
+#: od-photogallery-plugin-renderer.php:246
+#, php-format
+msgid "<strong>There are no existing and unused directories with images.</strong> If you want to create new one use our <a href=\"%s\"><strong>wizard for uploading new images</strong></a>."
+msgstr "<strong>Žádné nepoužité složky s obrázky neexistují.</strong> Pokud chcete vytvořit novou složku a nahrát do ní obrázky použijte vestavěný <a href=\"%s\"><strong>průvodce pro nahrání nových obrázků</strong></a>."
+
+#: od-photogallery-plugin-renderer.php:259
+msgid "Images in these directories already <strong>should be</strong> available in all required sizes (original, big, thumb) and saved with correct filenames."
+msgstr "Obrázky v těchto adresářích by již měli být dostupné v požadovaných velikostech (původní, velký a malý náhled) a uloženy pod správnými jmény."
+
+#: od-photogallery-plugin-renderer.php:274
+#: od-photogallery-plugin.php:255
+msgid "Photogallery - Settings"
+msgstr "Fotogalerie - Nastavení"
+
+#: od-photogallery-plugin-renderer.php:282
+msgid "Set ID of page which acts as gallery main page:"
+msgstr "Zadej ID stránky, která je hlavní stránkou galerie:"
+
+#: od-photogallery-plugin-renderer.php:286
+msgid "Set directory for storing single galleries:"
+msgstr "Zadej cestu k adresáři pro ukládání jednotlivých galerií:"
+
+#: od-photogallery-plugin-renderer.php:290
+msgid "Set max. width of thumbnail images:"
+msgstr "Maximální šíře náhledových obrázků:"
+
+#: od-photogallery-plugin-renderer.php:291
+#: od-photogallery-plugin-renderer.php:295
+#: od-photogallery-plugin-renderer.php:299
+#: od-photogallery-plugin-renderer.php:303
+msgid "pixels"
+msgstr "pixelů"
+
+#: od-photogallery-plugin-renderer.php:294
+msgid "Set max. height of thumbnail images:"
+msgstr "Maximální výše náhledových obrázků:"
+
+#: od-photogallery-plugin-renderer.php:298
+msgid "Set max. width for larger images:"
+msgstr "Maximální šíře  detailních obrázků:"
+
+#: od-photogallery-plugin-renderer.php:302
+msgid "Set max. height for larger images:"
+msgstr "Maximální výše detailních obrázků:"
+
+#: od-photogallery-plugin-renderer.php:306
+msgid "Supported images formats:"
+msgstr "Podporované typy obrázků:"
+
+#: od-photogallery-plugin-renderer.php:309
+msgid "Enter lowercased and comma-separated list of supported image formats. Defaultly is set <code>jpg,png</code> but available is also <code>gif</code>."
+msgstr "Vložte podporované typy oddělené čárkami a psané malými písmeny. Defaultně jsou nastaveny <code>jpg,png</code>, ale dostupný je i formát <code>gif</code>."
+
+#: od-photogallery-plugin-renderer.php:313
+msgid "Set maximum count of images uploaded per once:"
+msgstr "Nastav max. možný počet najednou nahráváných obrázků:"
+
+#: od-photogallery-plugin-renderer.php:314
+msgid "images"
+msgstr "obrázky"
+
+#: od-photogallery-plugin-renderer.php:318
+#: od-photogallery-plugin-renderer.php:357
+#: od-photogallery-plugin-renderer.php:444
+msgid "Save"
+msgstr "Uložit"
+
+#: od-photogallery-plugin-renderer.php:335
+#: od-photogallery-plugin-renderer.php:469
+msgid "Edit gallery #"
+msgstr "Edituj galerii #"
+
+#: od-photogallery-plugin-renderer.php:340
+#: od-photogallery-plugin-renderer.php:570
+msgid "Gallery title:"
+msgstr "Název galerie:"
+
+#: od-photogallery-plugin-renderer.php:344
+#: od-photogallery-plugin-renderer.php:539
+msgid "Gallery description:"
+msgstr "Popis galerie:"
+
+#: od-photogallery-plugin-renderer.php:348
+msgid "Images count:"
+msgstr "Počet obrázků:"
+
+#: od-photogallery-plugin-renderer.php:351
+msgid "Edit images"
+msgstr "Edituj obrázky"
+
+#: od-photogallery-plugin-renderer.php:352
+msgid "Add images"
+msgstr "Přidej obrázky"
+
+#: od-photogallery-plugin-renderer.php:405
+msgid "ID"
+msgstr "ID"
+
+#: od-photogallery-plugin-renderer.php:406
+#: od-photogallery-plugin-renderer.php:415
+msgid "Image"
+msgstr "Obrázek"
+
+#: od-photogallery-plugin-renderer.php:408
+#: od-photogallery-plugin-renderer.php:417
+msgid "Description"
+msgstr "Popis"
+
+#: od-photogallery-plugin-renderer.php:409
+#: od-photogallery-plugin-renderer.php:418
+msgid "Order"
+msgstr "Pořadí"
+
+#: od-photogallery-plugin-renderer.php:414
+msgid "Check all"
+msgstr "Označ vše"
+
+#: od-photogallery-plugin-renderer.php:472
+msgid "Upload new images"
+msgstr "Nahrát nové obrázky"
+
+#: od-photogallery-plugin-renderer.php:483
+msgid "Upload images <code>*</code>:"
+msgstr "Nahraj obrázky <code>*</code>:"
+
+#: od-photogallery-plugin-renderer.php:494
+msgid "Add more images"
+msgstr "Přidej více obrázků"
+
+#: od-photogallery-plugin-renderer.php:500
+#, php-format
+msgid "You can upload only images of format specified in plugin's options (currently: <code>%s</code>)!"
+msgstr "Nahrávat můžete pouze obrázky podporovaných typů (aktuálně: <code>%s</code>)!"
+
+#: od-photogallery-plugin-renderer.php:502
+#: od-photogallery-plugin-renderer.php:546
+#: od-photogallery-plugin-renderer.php:576
+msgid "Continue"
+msgstr "Pokračuj"
+
+#: od-photogallery-plugin-renderer.php:517
+msgid "Photogallery - Create new folder"
+msgstr "Fotogalerie - Vytvoř nový adresář"
+
+#: od-photogallery-plugin-renderer.php:522
+msgid "Directory name"
+msgstr "Název adresáře"
+
+#: od-photogallery-plugin-renderer.php:526
+msgid "Enter name for the folder of a new gallery. Directory name can not contain spaces and national or special characters (good: <code>test-gallery-title</code>; bad: <code>Test gallery title</code> or <code>Název testovací galerie</code> etc.)"
+msgstr "Vložte jméno pro adresář nové galerie. Jméno adresáře nesmí obsahovat mezery či národní nebo speciální znaky (dobře: <code>testovaci-galerie</code>; špatně: <code>Testovací galerie</code> nebo <code>Nějaký_název galerie</code> atp.)"
+
+#: od-photogallery-plugin-renderer.php:561
+#, php-format
+msgid "For the new gallery you've select directory <code>%1$s</code>. This folder contains <code style=\"color:green;\">%2$s</code> images.<br/>If you really want to create gallery, please, also fill it's name and submit this form."
+msgstr "Pro novou galerii jste zvolili složku <code>%1$s</code>. Tento adresář obsahuje <code style=\"color:green;\">%2$s</code> obrázků.<br/>Pokud skutečně chcete vytvořit galerii, pak vložte její název a potvrďte tento formulář."
+
+#: od-photogallery-plugin-renderer.php:574
+msgid "Now you will continue with selecting and describing single included images."
+msgstr "Nyní bude následovat výběr a popis obrázků, které chcete zahrnout do této fotogalerie."
+
+#: od-photogallery-plugin-widgets.php:16
+msgid "Widget with pane with rendered images from the newest photogallery."
+msgstr "Widget s panelem fotografií naposledy vytvořené fotogalerie."
+
+#: od-photogallery-plugin-widgets.php:25
+#: od-photogallery-plugin-widgets.php:119
+msgid "Latest photogallery"
+msgstr "Nejnovější galerie"
+
+#: od-photogallery-plugin-widgets.php:75
+msgid "We are sorry but gallery with given ID wasn't found."
+msgstr "Omlouváme se, ale galerie s daným ID  nebyla nalezena."
+
+#: od-photogallery-plugin-widgets.php:126
+#: od-photogallery-plugin-widgets.php:244
+msgid "Widget title"
+msgstr "Název widgetu"
+
+#: od-photogallery-plugin-widgets.php:130
+msgid "Select gallery to show"
+msgstr "Vyberte galerii"
+
+#: od-photogallery-plugin-widgets.php:132
+msgid "The newest photogallery"
+msgstr "Obrázky z nejnovější fotogalerie"
+
+#: od-photogallery-plugin-widgets.php:133
+msgid "The newest photogalleries"
+msgstr "Nejnovější galerie"
+
+#: od-photogallery-plugin-widgets.php:142
+#: od-photogallery-plugin-widgets.php:248
+msgid "Max. items count"
+msgstr "Max. počet položek"
+
+#: od-photogallery-plugin-widgets.php:147
+msgid "Use <em>Lightbox</em> effect?"
+msgstr "Použít efekt <em>Lightbox</em>?"
+
+#: od-photogallery-plugin-widgets.php:170
+msgid "Widget with list of the newest photogalleries."
+msgstr "Widget se seznamem nejnovějších galerií."
+
+#: od-photogallery-plugin-widgets.php:178
+#: od-photogallery-plugin-widgets.php:238
+msgid "Latest photogalleries"
+msgstr "Nejnovější galerie"
+
+#: od-photogallery-plugin-widgets.php:213
+msgid "More"
+msgstr "Více"
+
+#: od-photogallery-plugin-widgets.php:253
+msgid "Display <em>More...</em> link?"
+msgstr "Zobrazit odkaz <em>Více...</em>?"
+
+#: od-photogallery-plugin.php:221
+msgid "Given directory name is not valid!"
+msgstr "Zadané jméno galerie není platné!"
+
+#: od-photogallery-plugin.php:242
+#: od-photogallery-plugin.php:243
+#: od-photogallery-plugin.php:343
+#: od-photogallery-plugin.php:981
+msgid "Photogallery"
+msgstr "Fotogalerie"
+
+#: od-photogallery-plugin.php:249
+#: od-photogallery-plugin.php:508
+msgid "Photogallery - Add gallery"
+msgstr "Fotogalerie - Přidej galerii"
+
+#: od-photogallery-plugin.php:250
+msgid "Add gallery"
+msgstr "Přidej galerii"
+
+#: od-photogallery-plugin.php:256
+msgid "Settings"
+msgstr "Nastavení"
+
+#: od-photogallery-plugin.php:306
+msgid "Directory or file with given name already exists! You should enter another name."
+msgstr "Adresář nebo soubor s daným jménem již existuje! Vložte, prosím, jiné jméno."
+
+#: od-photogallery-plugin.php:309
+msgid "Directory or file with given name doesn't exist yet &ndash; you can safely use it."
+msgstr "Adresář s daným jménem zatím neexistuje &ndash; toto jméno můžete bezpečně použít."
+
+#: od-photogallery-plugin.php:353
+#: od-photogallery-plugin.php:356
+msgid "No galleries selected!"
+msgstr "Nebyly označeny žádné galerie!"
+
+#: od-photogallery-plugin.php:366
+msgid "Selected galleries were deleted."
+msgstr "Označené galerie byly smazány."
+
+#: od-photogallery-plugin.php:376
+msgid "Selected galleries were undeleted."
+msgstr "Označené galerie byly obnoveny."
+
+#: od-photogallery-plugin.php:387
+#, php-format
+msgid "Gallery with given ID <code>%s</code> wasn't found!"
+msgstr "Omlouváme se, ale galerie s ID <code>%s</code>  nebyla nalezena."
+
+#: od-photogallery-plugin.php:398
+msgid "Gallery was successfully updated."
+msgstr "Galerie byla úspěšně aktualizována."
+
+#: od-photogallery-plugin.php:475
+msgid "Image was successfully saved."
+msgstr "Obrázek byl úspěšně aktualizován."
+
+#: od-photogallery-plugin.php:486
+msgid "Image was successfully updated."
+msgstr "Obrázek byl úspěšně aktualizován."
+
+#: od-photogallery-plugin.php:530
+#, php-format
+msgid "Directory <code>%s</code> was successfully created."
+msgstr "Adresář <code>%s</code> byl úspěšně aktualizován."
+
+#: od-photogallery-plugin.php:536
+#, php-format
+msgid "Folder <code>%s</code> wasn't created! Application couldn't continue with uploading images."
+msgstr "Složka <code>%s</code> nebyla vytvořena! Aplikace nemůže pokračovat s nahráváním obrázků."
+
+#: od-photogallery-plugin.php:541
+#, php-format
+msgid "Folder <code>%s</code> wasn't created because it already exists!"
+msgstr "Složka <code>%s</code> nebyla vytvořena, protože již existuje!"
+
+#: od-photogallery-plugin.php:568
+#, php-format
+msgid "Gallery was successfully created (with ID <code>%s</code>)."
+msgstr "Galerie byla úspěšně vytvořena (s ID <code>%s</code>)."
+
+#: od-photogallery-plugin.php:573
+msgid "Available images"
+msgstr "Dostupné obrázky"
+
+#: od-photogallery-plugin.php:574
+#, php-format
+msgid "You're adding gallery <strong>%s</strong>. On this page you can select and describe images which you want to include into this new gallery."
+msgstr "Přidáváte fotogalerii <strong>%s</strong>. Na této stránce můžete vybrat a popsat obrázky, které chcete zahrnout do nové galerie."
+
+#: od-photogallery-plugin.php:604
+#, php-format
+msgid "Image was successfully created (with ID <code>%s</code>)."
+msgstr "Obrázek byl úspěšně vytvořen (s ID <code>%s</code>)."
+
+#: od-photogallery-plugin.php:607
+msgid "Gallery was successfully created."
+msgstr "Galerie byla úspěšně vytvořena."
+
+#: od-photogallery-plugin.php:616
+#, php-format
+msgid "Directory <code>%s</code> was successfully deleted."
+msgstr "Adresář <code>%s</code> byl úspěšně aktualizován."
+
+#: od-photogallery-plugin.php:618
+#, php-format
+msgid "Directory <code>%s</code> was not deleted!"
+msgstr "Adresář <code>%s</code> nebyl vymazán!"
+
+#: od-photogallery-plugin.php:649
+msgid "Photogallery settings were updated."
+msgstr "Nastavení galerie bylo úspěšně aktualizováno."
+
+#: od-photogallery-plugin.php:751
+#, php-format
+msgid "File <code>%s</code> wasn't uploaded to the server because is in bad image format (for supported images formats see plugin's options)."
+msgstr "Soubor <code>%s</code> nebyl nahrán na server, protože je špatného typu (pro povolené typy obrázků se podívejte do nastavení pluginu)."
+
+#: od-photogallery-plugin.php:772
+#, php-format
+msgid "Image file <code>%s</code> wasn't uploaded to the server!"
+msgstr "Obrázek <code>%s</code> nebyl nahrán na server!"
+
+#: od-photogallery-plugin.php:774
+#, php-format
+msgid "Image file <code>%s</code> was successfully uploaded to the server."
+msgstr "Obrázek <code>%s</code> byl úspěšně nahrán na server."
+
+#: wp-media-upload.php:2
+msgid "Nahrání nových souborů"
+msgstr "Nahrání nových souborů"
+
+#~ msgid "here"
+#~ msgstr "zde"
+#~ msgid "DELETED"
+#~ msgstr "SMAZÁNO"
+#~ msgid "Ulož galerii"
+#~ msgstr "Uložit galerii"
+#~ msgid "Uploaded images"
+#~ msgstr "Nahrané obrázky"
+#~ msgid "Gallery was successfully updated"
+#~ msgstr "Obrázek byl úspěšně nahrán na server"
+#~ msgid "Back"
+#~ msgstr "Zpět"
+#~ msgid "Directory was successfully created (full path <code>"
+#~ msgstr "Adresář byl úspěšně vytvořen (plná cesta <code>"
+#~ msgid "Folder wasn't created (full path <code>"
+#~ msgstr "Adresář nebyl vytvořen (plná cesta <code>"
+#~ msgid "Gallery was successfully created (with ID <code>"
+#~ msgstr "Galerie byla úspěšně vytvořena (s ID <code>"
+#~ msgid "After you submit this form will be gallery created."
+#~ msgstr "Po potvrzení bude galerie vytvořena."
+#~ msgid "Submit"
+#~ msgstr "Potvrď"
+#~ msgid ""
+#~ "Zadejte název pro adresář nové galerie. Název nesmí obsahovat mezery, "
+#~ "národní znaky a speciální znaky (správně: <code>sazeni-stromku-v-"
+#~ "okresech</code>; špatně: <code>Sázení stromků v okresech</code> nebo "
+#~ "<code>Sázení_Stromků</code> atd.)."
+#~ msgstr ""
+#~ "Zadejte název pro adresář nové galerie. Název nesmí obsahovat mezery, "
+#~ "národní znaky a speciální znaky (správně: <code>sazeni-stromku-v-"
+#~ "okresech</code>; špatně: <code>Sázení stromků v okresech</code> nebo "
+#~ "<code>Sázení_Stromků</code> atd.)."
+#~ msgid "</code>)."
+#~ msgstr "</code>)."
+#~ msgid ""
+#~ "Zde můžete vytvořit novou galerii z již nahraných složek s fotografiemi. "
+#~ "Fotografie pro jednotlivé galerie musí být umístěny v separátních "
+#~ "složkách s názvy, které neobsahují mezery, národní znaky a speciální  "
+#~ "znaky (správně: <code>sazeni-stromku-v-okresech</code>; špatně:  "
+#~ "<code>Sázení stromků v okresech</code> nebo <code>Sázení_Stromků</code>  "
+#~ "atd.)."
+#~ msgstr ""
+#~ "Zde můžete vytvořit novou galerii z již nahraných složek s fotografiemi. "
+#~ "Fotografie pro jednotlivé galerie musí být umístěny v separátních "
+#~ "složkách s názvy, které neobsahují mezery, národní znaky a speciální  "
+#~ "znaky (správně: <code>sazeni-stromku-v-okresech</code>; špatně:  "
+#~ "<code>Sázení stromků v okresech</code> nebo <code>Sázení_Stromků</code>  "
+#~ "atd.)."
+
