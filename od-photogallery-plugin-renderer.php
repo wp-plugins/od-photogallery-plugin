@@ -314,7 +314,39 @@ class odWpPhotogalleryPluginRenderer
 						<td><input type="text" name="option-gallery_max_upload_count" value="<?php echo $options['gallery_max_upload_count'];?>"/>&nbsp;<?php echo __('images', odWpPhotogalleryPlugin::$textdomain);?></td>
 					</tr>
 				</table>
-				<hr/>
+				<h3>Gallery template</h3>
+				<table class="widefat post fixed" cellpadding="1" cellspacing="1" style="100%;">
+          <tbody>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_cont_prefix"><?php echo __('Gallery container prefix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_cont_prefix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_cont_prefix']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_row_prefix"><?php echo __('Single gallery row prefix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_row_prefix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_row_prefix']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_photo_prefix"><?php echo __('Photo container prefix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_photo_prefix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_photo_prefix']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_photo_body"><?php echo __('Photo body template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_photo_body" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_photo_body']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_photo_suffix"><?php echo __('Photo container suffix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_photo_suffix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_photo_suffix']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_row_suffix"><?php echo __('Single gallery row suffix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_row_suffix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_row_suffix']));?></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row" style="vertical-align: middle;"><label for="option-gallery_template_cont_suffix"><?php echo __('Gallery container suffix template:', odWpPhotogalleryPlugin::$textdomain);?></label></th>
+              <td><textarea name="option-gallery_template_cont_suffix" style="width: 100%;"><?php echo str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_cont_suffix']));?></textarea></td>
+            </tr>
+          </tbody>
+        </table>
 				<input type="submit" value=" <?php echo __('Save', odWpPhotogalleryPlugin::$textdomain);?> " name="settings_save" class="button-primary action" />
 			</div>
 		</form>

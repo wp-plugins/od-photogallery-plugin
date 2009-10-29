@@ -150,9 +150,10 @@ class odWpPhotogalleryPluginModel
 		if(is_null($gallery)) 
 			return null;
 		
-		if(count($gallery) == 1) 
+		if(count($gallery) == 1) { 
 			return $gallery[0];
-		
+		}
+   
 		return null;
 	}
 	
@@ -232,7 +233,7 @@ class odWpPhotogalleryPluginModel
 		if(!$also_deleted) 
 			$query .= 'AND `display` = 1 ';
 		
-		$query .= 'ORDER BY `order` ASC ';
+		$query .= 'ORDER BY `order` ASC  ';
 		
 		if($max_count != -1) 
 			$query .= 'LIMIT 0, ' . $max_count . ' ';

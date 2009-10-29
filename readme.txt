@@ -3,7 +3,7 @@ Contributors: ondrejd
 Donate link: http://www.ondrejd.info/projects/wordpress-plugins/od-wp-photogallery-plugin/
 Tags: media,gallery,images
 Requires at least: 2.8
-Tested up to: 2.8.4
+Tested up to: 2.8.5
 Stable tag: 0.5.2
 
 Photogalleries plugin. Originally developed for site [Volby09](http://www.volby09.cz/ www.volby09.cz).
@@ -12,9 +12,9 @@ Photogalleries plugin. Originally developed for site [Volby09](http://www.volby0
 
 Main features:
 
-* enable simple building of image galleries (it not uses built in media support) – it’s targeted for sites where is [WordPress](http://wordpress.org/ "Your favorite software") used as a CMS
-* Plugin's second widgetcontains two widgets – one with the list of available galleries and second with images from the selected (or latest) gallery – this widget is aimed for the main page of blog on which is used
-* you can create galleries by two ways: using plugin’s own upload wizard or your favourite FTP client. If you use plugin’s wizard images will be automatically resized.
+* enable simple building of image galleries (it not uses built in media support). Is targeted for sites where is [WordPress](http://wordpress.org/ "Your favorite software") used as a CMS
+* contains two widgets, one with the list of available galleries and second with images from the selected (or latest) gallery. This widget could be used on the main page of the site
+* you can create galleries by two ways: using upload wizard or your favourite FTP client. If you are using the plugin upload wizard  images are automatically resized.
 * offers English and Czech locales
 
 == Installation ==
@@ -44,10 +44,15 @@ These types of images are supported: GIF, JPEG, PNG. But you can specify which y
 == Changelog ==
 
 = 0.5.3 =
-* allowed to create more galleries from one directory
-* added AJAX check if name for new directory is valid
-* used WP admin internal abilities for help and configuration
-* from this version is plugin hosted on http://wordpress.org/extend/plugins
++ template of page with gallery is now editable
+* images can be copied (or moved) to another gallery
+* images can be deleted
+- used WP admin internal abilities for help and configuration
+- allowed to create more galleries from one directory
+- added AJAX check if name for new directory is valid
+- added third widget ...
++ fixed several bugs around creating and saving galleries and their images
+* finished support web pages
 
 = 0.5.2 =
 * added support for more types of images then JPEG - currently can be used also PNG and GIF and you can specify supported types in plugin's options
@@ -57,6 +62,7 @@ These types of images are supported: GIF, JPEG, PNG. But you can specify which y
 * added option for maximum count of images uploaded in once 
 * fixed bug when saving plugin options
 * fixed URL rendering
+* from this version is plugin hosted on http://wordpress.org/extend/plugins
 
 = 0.5.1 =
 * repaired some bugs when edit galleries

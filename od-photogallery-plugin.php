@@ -3,7 +3,7 @@
 Plugin Name: Photogallery
 Plugin URI: http://ondrejd.info/projects/wordpress-plugins/
 Description: Plugin for creating image galleries. Originally developed for site <a href="http://www.volby09.cz/">www.volby09.cz</a>.
-Version: 0.5.3
+Version: 0.5.2
 Author: Ondrej Donek
 Author URI: http://www.ondrejd.info/
 */
@@ -44,6 +44,8 @@ Author URI: http://www.ondrejd.info/
 // FIXME Don't use $wpdb here but use odWpPhotogalleryPluginModel instead!!!
 // FIXME Use WordPress internal for getting plugin URL (several times in the file)!
 
+// http://codex.wordpress.org/Category:Advanced_Topics
+
 // Add our widgets
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'od-photogallery-plugin-model.php';
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'od-photogallery-plugin-renderer.php';
@@ -70,7 +72,15 @@ class odWpPhotogalleryPlugin /* extends WP_Plugin */
 		'gallery_full_size_width' => 640,
 		'gallery_full_size_height' => 480,
 		'gallery_supported_img_types' => 'jpg,png',
-		'gallery_max_upload_count' => 5
+		'gallery_max_upload_count' => 5,
+    // Gallery template parts
+    'gallery_template_cont_prefix' => '<div class="fotogalerie"><h3>{created}, {title}</h3><h5>{description}</h5>',
+    'gallery_template_row_prefix'  => '<div class="fotky">',
+    'gallery_template_photo_prefix' => '<div class="fotka">',
+    'gallery_template_photo_body' => '<a href="{photoUrl}" rel="lightbox[gallery]" title="{title}"><img src="{thumbUrl}" alt="{title}"/></a><p>{description}</p>',
+    'gallery_template_photo_suffix' => '</div>',
+    'gallery_template_row_suffix'  => '</div>',
+    'gallery_template_cont_suffix' => '</div>'
 	);
 	
 	/**
@@ -155,7 +165,8 @@ class odWpPhotogalleryPlugin /* extends WP_Plugin */
 				$options[$key] = $value;
 			}
 		}
-
+    
+    // FIXME Preferences updating occassionally doesn't work properly
 		if(!array_key_exists('latest_used_version', $options)) {
 			$options['latest_used_version'] = odWpPhotogalleryPlugin::$version;
 			$need_update = true;
@@ -627,6 +638,15 @@ addLoadEvent(function(func) {
 			$options['gallery_full_size_height'] = (int) $_POST['option-gallery_full_size_height'];
 			$options['gallery_supported_img_types'] = $_POST['option-gallery_supported_img_types'];
 			$options['gallery_max_upload_count'] = (int) $_POST['option-gallery_max_upload_count'];
+      // Gallery template parts
+      $options['gallery_template_cont_prefix'] = $_POST['option-gallery_template_cont_prefix'];
+      $options['gallery_template_row_prefix'] = $_POST['option-gallery_template_row_prefix'];
+      $options['gallery_template_photo_prefix'] = $_POST['option-gallery_template_photo_prefix'];
+      $options['gallery_template_photo_body'] = $_POST['option-gallery_template_photo_body'];
+      $options['gallery_template_photo_suffix'] = $_POST['option-gallery_template_photo_suffix'];
+      $options['gallery_template_row_suffix'] = $_POST['option-gallery_template_row_suffix'];
+      $options['gallery_template_cont_suffix'] = $_POST['option-gallery_template_cont_suffix'];
+      
 			update_option(odWpPhotogalleryPlugin::$plugin_id . '-options', $options);
 			
 			odWpPhotogalleryPluginRenderer::print_admin_msg(__('Photogallery settings were updated.', odWpPhotogalleryPlugin::$textdomain));
@@ -950,58 +970,51 @@ addLoadEvent(function(func) {
 	 */
 	function render_public_gallery($gallery_ID = 1)
 	{
-		// FIXME Use odWpPhotogalleryPluginModel::get_gallery(...)!!!
-		// FIXME Use odWpPhotogalleryPluginModel::get_gallery_images(...)!!! 
-		global $wpdb;
-		
-		$options = odWpPhotogalleryPlugin::get_options();
-		$ret     = '';
-		$query1  = "SELECT * FROM `{$wpdb->prefix}fotogalerie` WHERE `ID` = '{$gallery_ID}' LIMIT 1 ";
-		$gallery = $wpdb->get_results($query1, ARRAY_A);
-		
+    $ret = '';
+    $options = odWpPhotogalleryPlugin::get_options();
+    $gallery = odWpPhotogalleryPluginModel::get_gallery($gallery_ID);
+    
 		if(!is_null($gallery)) {
-			if(count($gallery) == 1) {
-				$ret .= '<div class="fotogalerie"><h2>' . __('Photogallery', odWpPhotogalleryPlugin::$textdomain) . '</h2>';
-				$ret .= '<h3>' . mysql2date('j.m.Y', $gallery[0]['created'], true) . ", " . $gallery[0]['title'] . '</h3>';
+        $header = str_replace('\\"', '"', str_replace('\\\'', '\'', $options['gallery_template_cont_prefix']));
+        $header = str_replace('{created}', mysql2date('j.m.Y', $gallery[0]['created'], true), $header);
+        $header = str_replace('{title}', $gallery[0]['title'], $header);
+        $header = str_replace('{description}', $gallery[0]['description'], $header);
+        $ret .= $header;
 				
-				if(!empty($gallery[0]['description'])) {
-					$ret .= '<h5>' . $gallery[0]['description'] . '</h5>';
-				}
+        $photos = odWpPhotogalleryPluginModel::get_gallery_images($gallery_ID, $gallery['title'], $gallery['folder']);
+        
+        if(!is_null($photos)) {
+            $ii = 1;
+            for($i=0; $i<count($photos); $i++) {
+              if($ii == 1) {
+                $ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_rows_prefix']));
+              }
+              
+              $ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_photo_prefix']));
+              
+              $body =str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_photo_body']));
+              $body = str_replace('{photoUrl}', $urls['full_url'], $body);
+              $body = str_replace('{thumbUrl}', $urls['thumb_url'], $body);
+              $body = str_replace('{title}', $photos[$i]['title'], $body);
+              $body = str_replace('{description}', $photos[$i]['description'], $body);
+              $ret .= $body;
+              
+              $ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_photo_suffix']));
+              
+              if($ii == 4) {
+                $ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_row_suffix']));
+                $ii = 1;
+              } else {
+                $ii++;
+              }
+            }
+            
+            if($ii > 1 && $ii < 5) {
+              $ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_rows_suffix']));
+            }
+          }
 				
-				$query2 = "SELECT * FROM `{$wpdb->prefix}fotogalerie_files` WHERE `gallery_ID`='{$gallery_ID}' AND `display`=1 ORDER BY `order` DESC ";
-				$photos = $wpdb->get_results($query2);
-				
-				if(!is_null($photos)) {
-					if(count($photos) > 0) {
-						$ii = 1;
-						for($i=0; $i<count($photos); $i++) {
-							if($ii == 1) {
-								$ret .= '<div class="fotky">';
-							}
-							
-							$img_type = str_replace('.', '', strtolower(strrchr($photos[$i]->file, '.')));
-							$urls = $this->get_urls_to_photo($gallery[0]['folder'], $photos[$i]->file, $img_type);
-							$ret .= "
-									<div class=\"fotka\">
-										<a href=\"" . $urls['full']  . "\" rel=\"lightbox[gallery]\" title=\"" . $photos[$i]->title . "\"><img src=\"" . $urls['thumb'] . "\"/></a>
-										<p>" . $photos[$i]->description . "</p>
-									</div>";
-							if($ii == 4) {
-								$ret .= '</div>';
-								$ii = 1;
-							} else {
-								$ii++;
-							}
-						}
-						
-						if($ii > 1 && $ii < 5) {
-							$ret .= '</div>';
-						}
-					}
-				}
-				
-				$ret .= '</div>';
-			}
+				$ret .= str_replace('\\"', '"', str_replace('\\\'', '\'', $template_parts['gallery_template_cont_suffix']));
 		}
 		
 		return $ret;
