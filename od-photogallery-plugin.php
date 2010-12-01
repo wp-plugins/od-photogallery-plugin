@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: odPhotogalleryPlugin
-Plugin URI: http://www.ondrejd.info/projects/wordpress-plugins/
+Plugin URI: http://www.ondrejd.info/projects/wordpress-plugins/od-photogallery-plugin
 Description: Plugin for creating image galleries and publishing them with your posts.
 Version: 0.5.3
 Author: Ondrej Donek

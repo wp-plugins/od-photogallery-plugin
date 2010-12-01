@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: ondrejd
-Donate link: http://www.ondrejd.info/projects/wordpress-plugins/od-wp-photogallery-plugin/
+Donate link: http://www.ondrejd.info/projects/wordpress-plugins/od-photogallery-plugin/
 Tags: media,gallery,images
 Requires at least: 2.8
 Tested up to: 3.0.2
@@ -21,12 +21,10 @@ Main features:
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
 1. Upload plugin's folder `od-photogallery-plugin` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Set up the plugin and its widgets
-4. For other details see [plugin's home page](http://www.ondrejd.info/projects/wordpress-plugins/od-wp-photogallery-plugin/)
+4. For other details see [plugin's home page](http://www.ondrejd.info/projects/wordpress-plugins/od-photogallery-plugin/)
 
 == Frequently Asked Questions ==
 
