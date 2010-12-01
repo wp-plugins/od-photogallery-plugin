@@ -4,7 +4,7 @@ Donate link: http://www.ondrejd.info/projects/wordpress-plugins/od-wp-photogalle
 Tags: media,gallery,images
 Requires at least: 2.8
 Tested up to: 3.0.2
-Stable tag: 0.5.2
+Stable tag: 0.5.3
 
 Plugin for creating image galleries and publishing them with your posts. 
 
