@@ -3,10 +3,10 @@ Contributors: ondrejd
 Donate link: http://www.ondrejd.info/projects/wordpress-plugins/od-wp-photogallery-plugin/
 Tags: media,gallery,images
 Requires at least: 2.8
-Tested up to: 2.8.5
+Tested up to: 3.0.2
 Stable tag: 0.5.2
 
-Photogalleries plugin. Originally developed for site [Volby09](http://www.volby09.cz/ www.volby09.cz).
+Plugin for creating image galleries and publishing them with your posts. 
 
 == Description ==
 
@@ -44,15 +44,10 @@ These types of images are supported: GIF, JPEG, PNG. But you can specify which y
 == Changelog ==
 
 = 0.5.3 =
-+ template of page with gallery is now editable
-* images can be copied (or moved) to another gallery
-* images can be deleted
-- used WP admin internal abilities for help and configuration
-- allowed to create more galleries from one directory
-- added AJAX check if name for new directory is valid
-- added third widget ...
-+ fixed several bugs around creating and saving galleries and their images
-* finished support web pages
+* allowed to create more galleries from one directory
+* added AJAX check if name for new directory is valid
+* used WP admin internal abilities for help and configuration
+* from this version is plugin hosted on http://wordpress.org/extend/plugins
 
 = 0.5.2 =
 * added support for more types of images then JPEG - currently can be used also PNG and GIF and you can specify supported types in plugin's options
@@ -62,7 +57,6 @@ These types of images are supported: GIF, JPEG, PNG. But you can specify which y
 * added option for maximum count of images uploaded in once 
 * fixed bug when saving plugin options
 * fixed URL rendering
-* from this version is plugin hosted on http://wordpress.org/extend/plugins
 
 = 0.5.1 =
 * repaired some bugs when edit galleries
